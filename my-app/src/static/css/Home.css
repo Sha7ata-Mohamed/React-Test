@@ -1,0 +1,66 @@
+.home-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-card {
+    width: 100%;
+    max-width: 700px;
+    background: rgb(206, 130, 130);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.home-content {
+    text-align: center;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    fill: #114b88;
+}
+
+.home-content h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: #114b88;
+    letter-spacing: 1px;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    color: #222;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.home-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .home-card {
+        padding: 25px;
+    }
+
+    .icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h2 {
+        font-size: 20px;
+    }
+}
