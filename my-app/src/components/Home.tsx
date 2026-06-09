@@ -1,7 +1,37 @@
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <>
+      <button onClick={handleClick}>You pressed me {count} times</button>
+    </>
+  );
+}
+
+function CounterDown() {
+  const [down, setDown] = useState(100);
+
+  function handleDown() {
+    setDown(down - 1);
+  }
+
+  return (
+    <>
+      <button onClick={handleDown}>You pressed me {down} times</button>
+    </>
+  );
+}
+
 function Home() {
   return (
-    <main className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <section className="bg-white rounded-xl shadow-md p-8 max-w-md w-full">
+    <main className="min-h-screen bg-black flex items-center justify-center">
+      <section className="bg-black rounded-xl shadow-md p-8 max-w-md w-full">
         <div className="text-center">
           <svg
             className="w-12 h-12 mx-auto text-blue-600"
@@ -22,20 +52,4 @@ function Home() {
   );
 }
 
-function Card() {
-  return (
-    <div className="max-w-sm bg-white rounded-xl shadow-md p-6">
-      <h2 className="text-2xl font-bold text-gray-900">React Card</h2>
-
-      <p className="mt-2 text-gray-600">
-        This card is styled using Tailwind CSS.
-      </p>
-
-      <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
-        Learn More
-      </button>
-    </div>
-  );
-}
-
-export { Card, Home };
+export { Home, Counter, CounterDown };

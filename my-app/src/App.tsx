@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router";
-import { Home, Card } from "./components/Home";
+import { Home, Counter, CounterDown } from "./components/Home.tsx";
 import About from "./components/About";
 import "./static/css/Navbar.css";
 import "./static/css/About.css";
@@ -11,11 +11,20 @@ function App() {
       <nav className="nav">
         <a href="/home">Home</a>
         <a href="/about">About</a>
+        <a href="/counter">Counter</a>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<><Home /><Card /></>} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route
+          path="/counter"
+          element={
+            <>
+              <Counter /> <CounterDown />{" "}
+            </>
+          }
+        />
       </Routes>
     </>
   );
